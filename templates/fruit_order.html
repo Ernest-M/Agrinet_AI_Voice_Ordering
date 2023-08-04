@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Order</title>
+</head>
+<body>
+    <h1>Welcome to Fruit Ordering</h1>
+    <form action="/get_info" method="post">
+        <p>Choose your fruits:</p>
+        {% for fruit in fruitList %}
+        <input type="checkbox" name="fruits[]" value="{{ fruit }}"> {{ fruit }}<br>
+        {% endfor %}
+        <p>Enter your delivery address:</p>
+        <input type="text" name="address" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
+
+
+
